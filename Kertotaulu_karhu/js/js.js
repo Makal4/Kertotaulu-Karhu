@@ -19,13 +19,24 @@ $(function() {
     game();
 
     function game() {
+        userAnswer = 0;
+        rightAnswer = 0;
+        firstNum = 0;
+        secondNum = 0;
+        time = 5;
+        counter = 0;
+        falsecounter = 0;
+        console.log("---------gamestart-------");
+        console.log("arvot: käytvast. " + userAnswer);
+        console.log("arvot: oikvast. " + rightAnswer);
+        console.log("arvot: ekanum. " + firstNum);
+        console.log("arvot: tokanum. " + secondNum);
+        console.log("arvot: oikeinvastat. " + counter);
+        console.log("arvot: väärinvast. " + falsecounter);
+        console.log("---------gamestart-------");
         randNumbers();
 
         $("#time").html("5");
-        time = 5;
-        //new game = all progress is back to 0
-        counter = 0;
-        falsecounter = 0;
         $("#prog1, #prog2, #prog3, #prog4, #prog5, #prog6, #prog7, #prog8, #prog9, #prog10").css("background-color", "#F44336");
 
         $("#answer").show();
@@ -38,15 +49,19 @@ $(function() {
             if (e.keyCode === 13) {
 
                 userAnswer = parseInt($("#answer").val());
+                rightAnswer = firstNum * secondNum;
                 //console.log(userAnswerMath);
                 if (userAnswer === rightAnswer) {
                     counter++;
                     time = 6;
                     randNumbers();
+                    console.log("vastaus oikein!");
                 } else {
                     falsecounter++;
                     randNumbers();
+                    console.log("vastaus väärin!");
                 }
+                console.log(rightAnswer);
             }
 
             //progress if answer is correct
@@ -117,8 +132,11 @@ $(function() {
     }
 
     function randNumbers() {
-
-        $("#answer").val("")
+        userAnswer = 0;
+        rightAnswer = 0;
+        firstNum = 0;
+        secondNum = 0;
+        $("#answer").val("");
 
         firstNum = Math.floor(Math.random() * 10) + 1;
         secondNum = Math.floor(Math.random() * 10) + 1;
@@ -126,12 +144,20 @@ $(function() {
         $("#firstNum").html(firstNum);
         $("#secondNum").html(secondNum);
 
-        rightAnswer = firstNum * secondNum;
-        console.log(rightAnswer);
+
+        //console.log(rightAnswer);
 
     }
 
     function gameEnd() {
+        console.log("---------gameend-------");
+        console.log("arvot: käytvast. " + userAnswer);
+        console.log("arvot: oikvast. " + rightAnswer);
+        console.log("arvot: ekanum. " + firstNum);
+        console.log("arvot: tokanum. " + secondNum);
+        console.log("arvot: oikeinvastat. " + counter);
+        console.log("arvot: väärinvast. " + falsecounter);
+        console.log("---------gameend-------");
         $("#answer").hide();
         $("#infobox").show();
         $("#time").html("0");
