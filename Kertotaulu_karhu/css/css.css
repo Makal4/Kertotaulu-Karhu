@@ -23,7 +23,7 @@ input {
   background-color: #73E0FF;
 }
 
-#soundControl {
+#soundcontrol {
   text-align: right;
   padding-right: 50px;
 }
@@ -52,12 +52,12 @@ input {
   background-color: #F44336;
 }
 
-#gameArea {
+#gamearea, #endgamearea {
   text-align: center;
   margin: auto;
 }
 
-#firstNum, #secondNum, #times, #equal {
+#firstnum, #secondnum, #times, #equal {
   display:inline-block;
   text-align: center;
 }
