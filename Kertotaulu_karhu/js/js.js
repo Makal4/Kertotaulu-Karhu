@@ -11,8 +11,8 @@ $(function() {
 
   var music = new Audio();
 
-  //music.src = "sound/music.mp3";
-  music.volume = 0.5;
+  music.src = "sound/music.mp3";
+  music.volume = 0.2;
   music.play();
   music.loop = true;
 
@@ -71,6 +71,7 @@ $(function() {
     }
     if (counter === 10) {
       $("#prog10").css("background-color", "#4CAF50");
+      gameEnd();
     }
 
   });
@@ -150,14 +151,14 @@ $(function() {
     $("#gamearea").hide();
     $("#endgamearea").show();
     $("#time").html("0");
-    $("#infobox").html("Aika umpeutui. Vastasit väärin " + falsecounter + " kertaa. Paina space pelataksesi uudelleen <br> <button id='play'>Kaka</button>");
+    $("#infobox").html("Aika umpeutui. Vastasit väärin " + falsecounter + " kertaa. <br> <button id='play'>Pelaa uudelleen</button>");
 
-    $("#gamearea").keydown(function(f) {
-      if (f.keyCode === 32) {
-        console.log("painettu");
-        game();
-      }
-    });
+    // $("#endgamearea").keydown(function(f) {
+    //   if (f.keyCode === 32) {
+    //     console.log("painettu");
+    //     game();
+    //   }
+    // });
 
     $("#play").click(function() {
       game();

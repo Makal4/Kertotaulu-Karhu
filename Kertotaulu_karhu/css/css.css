@@ -1,10 +1,10 @@
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 body, input {
@@ -39,7 +39,7 @@ input {
   height: 30px;
   width: 30px;
   margin-bottom: 10px;
-  display:inline-block;
+  display: inline-block;
   background-color: #F44336;
 }
 
@@ -48,7 +48,7 @@ input {
   height: 40px;
   width: 40px;
   margin-bottom: 10px;
-  display:inline-block;
+  display: inline-block;
   background-color: #F44336;
 }
 
@@ -58,12 +58,27 @@ input {
 }
 
 #firstnum, #secondnum, #times, #equal {
-  display:inline-block;
+  display: inline-block;
   text-align: center;
 }
 
 #infobox {
   color: #F44336;
-  display:inline-block;
+  display: inline-block;
   text-align: center;
+}
+
+#play {
+  font-family: 'Press Start 2P', cursive;
+  border: solid 3px black;
+  height: 80px;
+  width: 200px;
+  margin-top: 40px;
+  background-color: #4CAF50;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#play:hover {
+  background-color: #81C784;
 }
