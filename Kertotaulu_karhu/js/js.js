@@ -142,7 +142,12 @@ $(function() {
       $("#gamearea").hide();
       $("#endgamearea").show();
       $("#time").html("0");
-      $("#infobox").html("Voitit pelin! Vastasit väärin " + falsecounter + " kertaa. Paina space pelataksesi uudelleen <br> <button id='play'>Kaka</button>");
+      $("#infobox").html("Voitit pelin! Vastasit väärin " + falsecounter + " kertaa. <br> <button id='play'>Pelaa uudelleen</button>");
+      $("#infobox").css("color", "#4CAF50");
+
+      $("#play").click(function() {
+        game();
+      });
   }
 
   function gameEndTime() {
@@ -152,13 +157,7 @@ $(function() {
     $("#endgamearea").show();
     $("#time").html("0");
     $("#infobox").html("Aika umpeutui. Vastasit väärin " + falsecounter + " kertaa. <br> <button id='play'>Pelaa uudelleen</button>");
-
-    // $("#endgamearea").keydown(function(f) {
-    //   if (f.keyCode === 32) {
-    //     console.log("painettu");
-    //     game();
-    //   }
-    // });
+    $("#infobox").css("color", "#F44336");
 
     $("#play").click(function() {
       game();
