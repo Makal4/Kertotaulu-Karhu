@@ -25,18 +25,18 @@ $(function() {
 
       userAnswer = parseInt($("#answer").val());
       // rightAnswer = firstNum * secondNum;
-      console.log("oikea vastaus " + rightAnswer);
-      console.log("sinun vastaus " + userAnswer);
+      //console.log("oikea vastaus " + rightAnswer);
+      //console.log("sinun vastaus " + userAnswer);
       //console.log(userAnswerMath);
       if (userAnswer === rightAnswer) {
         counter++;
         time = 6;
         randNumbers();
-        console.log("vastaus oikein!");
+        //console.log("vastaus oikein!");
       } else {
         falsecounter++;
         randNumbers();
-        console.log("vastaus väärin!");
+        //console.log("vastaus väärin!");
       }
       //console.log(rightAnswer);
     }
